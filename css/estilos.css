@@ -1,0 +1,70 @@
+/* ---- ----- ---- VARIABLES ---- ---- ----*/
+
+:root {
+    --background-pokebola: white;
+    --lineas-pokebola: black;
+    --tapa-pokebola: red;
+}
+
+/* ---- ---- ---- Cambio de medidas ----- ----- -----*/
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background: black;
+}
+
+/* ---- ---- ---- Comienza pokebola ---- ---- ----*/
+
+.pokebola-container {
+    margin-top: 250px;
+    display: flex;
+    justify-content: center;
+}
+
+.pokebola {
+    width: 10rem;
+    height: 10rem;
+    background-color: var(--background-pokebola);
+    border-radius: 50%;
+}
+
+.pokebola::before {
+    content: '';
+    width: 10rem;
+    height: 5rem;
+    background: var(--tapa-pokebola);
+    border-radius: 5rem 5rem 0 0;
+    position: absolute;
+}
+
+.detalle {
+    width: 10rem;
+    height: .5rem;
+    background: var(--lineas-pokebola);
+    margin-top: 4.8rem;
+    position: absolute;
+}
+
+.detalle::before {
+    content: '';
+    width: 3rem;
+    height: 3rem;
+    background: var(--lineas-pokebola);
+    border-radius: 50%;
+    position: absolute;
+    margin:-1.1rem 0 0 3.5rem;
+}
+
+.detalle::after {
+    content: '';
+    width: 1.8rem;
+    height: 1.8rem;
+    background: var(--background-pokebola);
+    border-radius: 50%;
+    position: absolute;
+    margin-top: -0.5rem;
+    margin-left: 4.1rem;
+}
